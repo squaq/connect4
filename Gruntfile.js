@@ -32,12 +32,12 @@ module.exports = function(grunt) {
     };
 
     var srcFiles = [
-        '<%= config.app %>/scripts/intro.js',
-        '<%= config.app %>/scripts/controller/game-loop-controller.js',
-        '<%= config.app %>/scripts/controller/scene-controller.js',
-        '<%= config.app %>/scripts/scene/main-menu-scene.js',
-        '<%= config.app %>/scripts/scene/game-scene.js',
-        '<%= config.app %>/scripts/outro.js'
+//        '<%= config.app %>/scripts/intro.js',
+//        '<%= config.app %>/scripts/controller/game-loop-controller.js',
+//        '<%= config.app %>/scripts/controller/scene-controller.js',
+//        '<%= config.app %>/scripts/scene/main-menu-scene.js',
+//        '<%= config.app %>/scripts/scene/game-scene.js',
+        '<%= config.app %>/scripts/app.js'
     ];
 
     // Define the configuration for all the tasks

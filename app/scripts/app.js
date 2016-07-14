@@ -60,12 +60,10 @@
                     tile_s.interactive = true;
                     tile_s.on('mousedown',this.click);
                     tile_s.arrPos = {'y':y-1, 'x':x-1} 
-                    console.log(this.click)
                     tile_s.on('touchstart',this.click);
                     this.stage.addChild(tile_s);
-//                    this.quad[y-1][x-1] = {'tile':tile_s, 'num':0}; 
                     
-                    if(y != 6) tile_s.visible = false;
+                    if(y != 6) tile_s.interactive = false;
                 }
             }
         },
@@ -78,7 +76,7 @@
             App.stage.addChild(sp);
             App.quad[this.arrPos.y][this.arrPos.x] = 1;
             var index = App.stage.getChildIndex(this) -7;
-            if(index >= 0) App.stage.getChildAt(index).visible = true;
+            if(index >= 0) App.stage.getChildAt(index).interactive = true;
             
             console.log(App.quad);
         },
@@ -91,11 +89,14 @@
         }
     };
     
-    App.init();
-    PIXI.loader
-        .add('images/game/red.png')
-        .add('images/game/yellow.png')
-        .add('images/game/tile.png')
-        .load(App.setImgs());
+    $(document).ready(function(){
+        App.init();
+        PIXI.loader
+            .add('images/game/red.png')
+            .add('images/game/yellow.png')
+            .add('images/game/tile.png')
+            .load(App.setImgs());        
+    });
+    
 
 }(jQuery, this));
