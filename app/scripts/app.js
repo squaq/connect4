@@ -159,11 +159,9 @@
                 this.stage.getChildAt(index).interactive = true;
                 this.stage.getChildAt(index).alpha = 1;
             }
+            //checking end game
             var end = this.checkEndGame();
-            
-            
-            
-            if(end>0) this.endingGame(end);//setTimeout(function(){alert("The Player "+(end==App.RED?"red":"yellow")+" wins")}, 100);
+            if(end>0) this.endingGame(end);
         },
         
         
